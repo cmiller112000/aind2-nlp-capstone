@@ -12022,7 +12022,7 @@ Sequence 3 in x
 <span class="sd">    :return: Padded numpy array of sequences</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement</span>
-    <span class="k">return</span> <span class="n">pad_sequences</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">length</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int32&#39;</span><span class="p">,</span><span class="n">padding</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pad_sequences</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">maxlen</span><span class="o">=</span><span class="n">length</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">)</span>
 
 <span class="n">tests</span><span class="o">.</span><span class="n">test_pad</span><span class="p">(</span><span class="n">pad</span><span class="p">)</span>
 
@@ -12190,7 +12190,7 @@ A basic RNN model is a good baseline for sequence data.  In this model, you'll b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">GRU</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">TimeDistributed</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">SimpleRNN</span>
@@ -12250,26 +12250,26 @@ A basic RNN model is a good baseline for sequence data.  In this model, you'll b
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-21s - loss: 2.2336 - acc: 0.5172 - val_loss: nan - val_acc: 0.5931
+24s - loss: 2.2159 - acc: 0.5221 - val_loss: nan - val_acc: 0.5953
 Epoch 2/10
-20s - loss: 1.4350 - acc: 0.6117 - val_loss: nan - val_acc: 0.6282
+21s - loss: 1.4271 - acc: 0.6106 - val_loss: nan - val_acc: 0.6269
 Epoch 3/10
-20s - loss: 1.2564 - acc: 0.6380 - val_loss: nan - val_acc: 0.6460
+21s - loss: 1.2558 - acc: 0.6369 - val_loss: nan - val_acc: 0.6458
 Epoch 4/10
-20s - loss: 1.1494 - acc: 0.6571 - val_loss: nan - val_acc: 0.6669
+21s - loss: 1.1473 - acc: 0.6572 - val_loss: nan - val_acc: 0.6617
 Epoch 5/10
-20s - loss: 1.0747 - acc: 0.6704 - val_loss: nan - val_acc: 0.6700
+21s - loss: 1.0776 - acc: 0.6683 - val_loss: nan - val_acc: 0.6738
 Epoch 6/10
-21s - loss: 1.0177 - acc: 0.6779 - val_loss: nan - val_acc: 0.6805
+21s - loss: 1.0221 - acc: 0.6770 - val_loss: nan - val_acc: 0.6812
 Epoch 7/10
-20s - loss: 0.9730 - acc: 0.6851 - val_loss: nan - val_acc: 0.6898
+21s - loss: 0.9801 - acc: 0.6832 - val_loss: nan - val_acc: 0.6888
 Epoch 8/10
-20s - loss: 0.9347 - acc: 0.6925 - val_loss: nan - val_acc: 0.6963
+21s - loss: 0.9393 - acc: 0.6917 - val_loss: nan - val_acc: 0.6954
 Epoch 9/10
-20s - loss: 0.8987 - acc: 0.7010 - val_loss: nan - val_acc: 0.7042
+21s - loss: 0.9029 - acc: 0.7005 - val_loss: nan - val_acc: 0.7119
 Epoch 10/10
-21s - loss: 0.8652 - acc: 0.7105 - val_loss: nan - val_acc: 0.7152
-new jersey est parfois calme en mois de il est il est en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+20s - loss: 0.8601 - acc: 0.7164 - val_loss: nan - val_acc: 0.7191
+new jersey est parfois calme en mois de il et il est en en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 </pre>
 </div>
 </div>
@@ -12292,7 +12292,7 @@ You've turned the words into ids, but there's a better representation of a word.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers.embeddings</span> <span class="k">import</span> <span class="n">Embedding</span>
@@ -12351,26 +12351,26 @@ You've turned the words into ids, but there's a better representation of a word.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-23s - loss: 2.9947 - acc: 0.4529 - val_loss: nan - val_acc: 0.5172
+23s - loss: 2.9831 - acc: 0.4519 - val_loss: nan - val_acc: 0.5239
 Epoch 2/10
-22s - loss: 1.6378 - acc: 0.6135 - val_loss: nan - val_acc: 0.7082
+22s - loss: 1.6243 - acc: 0.6161 - val_loss: nan - val_acc: 0.6985
 Epoch 3/10
-22s - loss: 0.9894 - acc: 0.7586 - val_loss: nan - val_acc: 0.8048
+23s - loss: 1.0158 - acc: 0.7507 - val_loss: nan - val_acc: 0.7948
 Epoch 4/10
-22s - loss: 0.6322 - acc: 0.8251 - val_loss: nan - val_acc: 0.8474
+23s - loss: 0.6573 - acc: 0.8210 - val_loss: nan - val_acc: 0.8439
 Epoch 5/10
-22s - loss: 0.4644 - acc: 0.8615 - val_loss: nan - val_acc: 0.8768
+22s - loss: 0.4783 - acc: 0.8597 - val_loss: nan - val_acc: 0.8732
 Epoch 6/10
-22s - loss: 0.3762 - acc: 0.8835 - val_loss: nan - val_acc: 0.8928
+22s - loss: 0.3776 - acc: 0.8843 - val_loss: nan - val_acc: 0.8927
 Epoch 7/10
-22s - loss: 0.3215 - acc: 0.8979 - val_loss: nan - val_acc: 0.9032
+23s - loss: 0.3239 - acc: 0.8975 - val_loss: nan - val_acc: 0.9043
 Epoch 8/10
-22s - loss: 0.2899 - acc: 0.9063 - val_loss: nan - val_acc: 0.9120
+23s - loss: 0.2858 - acc: 0.9079 - val_loss: nan - val_acc: 0.9106
 Epoch 9/10
-22s - loss: 0.2641 - acc: 0.9139 - val_loss: nan - val_acc: 0.9159
+23s - loss: 0.2652 - acc: 0.9129 - val_loss: nan - val_acc: 0.9171
 Epoch 10/10
-23s - loss: 0.2452 - acc: 0.9193 - val_loss: nan - val_acc: 0.9182
-new jersey est parfois calme en cours de l&#39; automne neigeux il est avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+22s - loss: 0.2451 - acc: 0.9188 - val_loss: nan - val_acc: 0.9192
+new jersey est parfois calme en l&#39; automne il est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 </pre>
 </div>
 </div>
@@ -12392,7 +12392,7 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Bidirectional</span>
@@ -12449,26 +12449,26 @@ One restriction of a RNN is that it can't see the future input, only the past.  
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-40s - loss: 1.8563 - acc: 0.5731 - val_loss: nan - val_acc: 0.6286
+40s - loss: 1.8589 - acc: 0.5729 - val_loss: nan - val_acc: 0.6260
 Epoch 2/10
-39s - loss: 1.2385 - acc: 0.6442 - val_loss: nan - val_acc: 0.6586
+40s - loss: 1.2387 - acc: 0.6441 - val_loss: nan - val_acc: 0.6551
 Epoch 3/10
-39s - loss: 1.0955 - acc: 0.6724 - val_loss: nan - val_acc: 0.6842
+40s - loss: 1.0986 - acc: 0.6716 - val_loss: nan - val_acc: 0.6831
 Epoch 4/10
-39s - loss: 0.9969 - acc: 0.6904 - val_loss: nan - val_acc: 0.6977
+39s - loss: 1.0023 - acc: 0.6877 - val_loss: nan - val_acc: 0.6977
 Epoch 5/10
-39s - loss: 0.9258 - acc: 0.7032 - val_loss: nan - val_acc: 0.7088
+39s - loss: 0.9311 - acc: 0.7021 - val_loss: nan - val_acc: 0.6986
 Epoch 6/10
-39s - loss: 0.8729 - acc: 0.7126 - val_loss: nan - val_acc: 0.7218
+39s - loss: 0.8803 - acc: 0.7105 - val_loss: nan - val_acc: 0.7189
 Epoch 7/10
-40s - loss: 0.8267 - acc: 0.7226 - val_loss: nan - val_acc: 0.7295
+40s - loss: 0.8341 - acc: 0.7198 - val_loss: nan - val_acc: 0.7262
 Epoch 8/10
-40s - loss: 0.7869 - acc: 0.7325 - val_loss: nan - val_acc: 0.7441
+40s - loss: 0.7941 - acc: 0.7277 - val_loss: nan - val_acc: 0.7358
 Epoch 9/10
-40s - loss: 0.7520 - acc: 0.7437 - val_loss: nan - val_acc: 0.7520
+40s - loss: 0.7572 - acc: 0.7382 - val_loss: nan - val_acc: 0.7451
 Epoch 10/10
-40s - loss: 0.7040 - acc: 0.7628 - val_loss: nan - val_acc: 0.7735
-new jersey est parfois calme au l&#39; et il et il est en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+40s - loss: 0.7236 - acc: 0.7492 - val_loss: nan - val_acc: 0.7485
+new jersey est parfois calme en mois de il et il est en en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 </pre>
 </div>
 </div>
@@ -12490,7 +12490,7 @@ new jersey est parfois calme au l&#39; et il et il est en &lt;PAD&gt; &lt;PAD&gt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">RepeatVector</span>
@@ -12549,25 +12549,25 @@ new jersey est parfois calme au l&#39; et il et il est en &lt;PAD&gt; &lt;PAD&gt
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-43s - loss: 2.7762 - acc: 0.4597 - val_loss: nan - val_acc: 0.5185
+42s - loss: 2.7127 - acc: 0.4660 - val_loss: nan - val_acc: 0.5320
 Epoch 2/10
-42s - loss: 1.8532 - acc: 0.5462 - val_loss: nan - val_acc: 0.5695
+42s - loss: 1.8393 - acc: 0.5490 - val_loss: nan - val_acc: 0.5678
 Epoch 3/10
-43s - loss: 1.5737 - acc: 0.5820 - val_loss: nan - val_acc: 0.5934
+42s - loss: 1.5336 - acc: 0.5871 - val_loss: nan - val_acc: 0.5894
 Epoch 4/10
-43s - loss: 1.4737 - acc: 0.5975 - val_loss: nan - val_acc: 0.6144
+43s - loss: 1.3922 - acc: 0.6128 - val_loss: nan - val_acc: 0.6296
 Epoch 5/10
-43s - loss: 1.3528 - acc: 0.6207 - val_loss: nan - val_acc: 0.6170
+43s - loss: 1.2996 - acc: 0.6312 - val_loss: nan - val_acc: 0.6367
 Epoch 6/10
-43s - loss: 1.2920 - acc: 0.6325 - val_loss: nan - val_acc: 0.6299
+43s - loss: 1.2842 - acc: 0.6318 - val_loss: nan - val_acc: 0.6409
 Epoch 7/10
-43s - loss: 1.2286 - acc: 0.6410 - val_loss: nan - val_acc: 0.6452
+43s - loss: 1.1949 - acc: 0.6481 - val_loss: nan - val_acc: 0.6519
 Epoch 8/10
-43s - loss: 1.1829 - acc: 0.6471 - val_loss: nan - val_acc: 0.6523
+42s - loss: 1.1585 - acc: 0.6542 - val_loss: nan - val_acc: 0.6528
 Epoch 9/10
-43s - loss: 1.1408 - acc: 0.6552 - val_loss: nan - val_acc: 0.6619
+43s - loss: 1.1586 - acc: 0.6544 - val_loss: nan - val_acc: 0.6498
 Epoch 10/10
-43s - loss: 1.2114 - acc: 0.6437 - val_loss: nan - val_acc: 0.6525
+42s - loss: 1.1007 - acc: 0.6655 - val_loss: nan - val_acc: 0.6796
 new jersey est parfois chaud en l&#39; et il est est en en &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 </pre>
 </div>
@@ -12589,7 +12589,7 @@ new jersey est parfois chaud en l&#39; et il est est en en &lt;PAD&gt; &lt;PAD&g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_final</span><span class="p">(</span><span class="n">input_shape</span><span class="p">,</span> <span class="n">output_sequence_length</span><span class="p">,</span> <span class="n">english_vocab_size</span><span class="p">,</span> <span class="n">french_vocab_size</span><span class="p">):</span>
@@ -12604,7 +12604,7 @@ new jersey est parfois chaud en l&#39; et il est est en en &lt;PAD&gt; &lt;PAD&g
     <span class="c1"># TODO: Implement</span>
     <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.001</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Embedding</span><span class="p">(</span><span class="n">english_vocab_size</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="n">input_length</span><span class="o">=</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Embedding</span><span class="p">(</span><span class="n">english_vocab_size</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="n">input_length</span><span class="o">=</span><span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mask_zero</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
     <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Bidirectional</span><span class="p">(</span><span class="n">GRU</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span><span class="n">return_sequences</span><span class="o">=</span><span class="kc">False</span><span class="p">)))</span>
     <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">RepeatVector</span><span class="p">(</span><span class="n">output_sequence_length</span><span class="p">))</span>
     <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Bidirectional</span><span class="p">(</span><span class="n">GRU</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span><span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">)))</span>
@@ -12650,7 +12650,7 @@ new jersey est parfois chaud en l&#39; et il est est en en &lt;PAD&gt; &lt;PAD&g
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -12707,30 +12707,30 @@ new jersey est parfois chaud en l&#39; et il est est en en &lt;PAD&gt; &lt;PAD&g
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Train on 110288 samples, validate on 27573 samples
 Epoch 1/10
-92s - loss: 2.3341 - acc: 0.4938 - val_loss: nan - val_acc: 0.5882
+95s - loss: 2.3275 - acc: 0.4990 - val_loss: nan - val_acc: 0.6044
 Epoch 2/10
-91s - loss: 1.3707 - acc: 0.6371 - val_loss: nan - val_acc: 0.6726
+94s - loss: 1.3621 - acc: 0.6408 - val_loss: nan - val_acc: 0.6849
 Epoch 3/10
-91s - loss: 1.0388 - acc: 0.7106 - val_loss: nan - val_acc: 0.7344
+94s - loss: 1.0116 - acc: 0.7172 - val_loss: nan - val_acc: 0.7498
 Epoch 4/10
-91s - loss: 0.8197 - acc: 0.7592 - val_loss: nan - val_acc: 0.7764
+94s - loss: 0.7837 - acc: 0.7705 - val_loss: nan - val_acc: 0.7946
 Epoch 5/10
-91s - loss: 0.6613 - acc: 0.8026 - val_loss: nan - val_acc: 0.8198
+95s - loss: 0.6164 - acc: 0.8164 - val_loss: nan - val_acc: 0.8426
 Epoch 6/10
-91s - loss: 0.5362 - acc: 0.8389 - val_loss: nan - val_acc: 0.8549
+94s - loss: 0.4714 - acc: 0.8625 - val_loss: nan - val_acc: 0.8831
 Epoch 7/10
-91s - loss: 0.4326 - acc: 0.8707 - val_loss: nan - val_acc: 0.8822
+94s - loss: 0.3463 - acc: 0.9004 - val_loss: nan - val_acc: 0.9124
 Epoch 8/10
-91s - loss: 0.3400 - acc: 0.8983 - val_loss: nan - val_acc: 0.9058
+94s - loss: 0.2526 - acc: 0.9281 - val_loss: nan - val_acc: 0.9370
 Epoch 9/10
-91s - loss: 0.2646 - acc: 0.9221 - val_loss: nan - val_acc: 0.9287
+94s - loss: 0.2007 - acc: 0.9418 - val_loss: nan - val_acc: 0.9485
 Epoch 10/10
-91s - loss: 0.2143 - acc: 0.9362 - val_loss: nan - val_acc: 0.9426
+94s - loss: 0.1539 - acc: 0.9559 - val_loss: nan - val_acc: 0.9534
 Sample 1:
 il a vu un vieux camion jaune &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 Il a vu un vieux camion jaune
 Sample 2:
-new jersey est parfois calme au cours et il est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
+new jersey est parfois calme pendant l&#39; automne et il est neigeux en avril &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt; &lt;PAD&gt;
 </pre>
 </div>
@@ -12742,7 +12742,7 @@ new jersey est parfois calme au cours et il est neigeux en avril &lt;PAD&gt; &lt
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">english_sentences</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
